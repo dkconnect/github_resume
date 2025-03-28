@@ -6,9 +6,10 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Slightly wider on smaller screens */
+    max-width: 1200px; /* Limits the width on very large screens */
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -17,30 +18,31 @@ header {
     text-align: center;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.5rem; /* Scales with viewport */
     font-weight: bold;
 }
 
 section {
-    margin: 20px 0;
+    margin: 1.5rem 0;
 }
 
 h2 {
     background-color: #e0e0e0;
-    padding: 5px 10px;
-    font-size: 18px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0 0 1rem 0;
 }
 
 .main-content {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .left-column, .right-column {
@@ -50,20 +52,20 @@ h2 {
 .entry {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 3.5rem; /* Scales with viewport */
+    height: 3.5rem;
     border-radius: 50%;
-    margin-right: 15px;
-    object-fit: contain; /* Ensures the logo fits within the circle without distortion */
+    margin-right: 1rem;
+    object-fit: contain;
 }
 
 .details p {
     margin: 0;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
 .details p strong {
@@ -71,8 +73,17 @@ h2 {
 }
 
 .contact p, .update p {
-    font-size: 14px;
-    margin: 5px 0;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.contact a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 .skills ul {
@@ -81,29 +92,102 @@ h2 {
 }
 
 .skills li {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.contact a {
-    color: #000; /* Matches the black text color of the resume */
-    text-decoration: none; /* Removes the default underline from links */
-}
-
-.contact a:hover {
-    text-decoration: underline; /* Adds an underline on hover for better usability */
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 0.75rem;
     vertical-align: middle;
-    object-fit: contain; /* Ensures the icon fits within the circle without distortion */
+    object-fit: contain;
 }
 
-.update p::before {
-    content: "●";
-    margin-right: 5px;
+.update .bullet {
+    margin-right: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .main-content {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 1.5rem;
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .logo {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .details p, .contact p, .skills li, .update p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        width: 98%;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.75rem;
+    }
+
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    .details p, .contact p, .skills li, .update p {
+        font-size: 0.8rem;
+    }
+
+    .entry {
+        margin-bottom: 0.75rem;
+    }
+
+    section {
+        margin: 1rem 0;
+    }
 }
