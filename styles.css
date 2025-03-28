@@ -85,13 +85,22 @@ h2 {
     margin: 5px 0;
 }
 
+.contact a {
+    color: #000; /* Matches the black text color of the resume */
+    text-decoration: none; /* Removes the default underline from links */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Adds an underline on hover for better usability */
+}
+
 .icon {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
-    object-fit: contain;
+    object-fit: contain; /* Ensures the icon fits within the circle without distortion */
 }
 
 .update p::before {
