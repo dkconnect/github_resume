@@ -63,6 +63,10 @@ h2 {
     object-fit: contain;
 }
 
+.details {
+    flex: 1; /* Ensures the details take up the remaining space */
+}
+
 .details p {
     margin: 0;
     font-size: 0.9rem;
@@ -72,9 +76,23 @@ h2 {
     font-weight: bold;
 }
 
-.contact p, .update p {
+/* Styling for Contact, Skills, and Update sections to align with Achievements */
+.right-column .contact, .right-column .skills, .right-column .update {
+    padding-left: 4.5rem; /* Matches the width of the logo (3.5rem) + margin-right (1rem) */
+}
+
+.contact p, .skills li, .update p {
     font-size: 0.9rem;
     margin: 0.5rem 0;
+}
+
+.contact .entry {
+    display: flex;
+    align-items: center;
+}
+
+.contact .entry img {
+    margin-right: 1rem;
 }
 
 .contact a {
@@ -89,11 +107,6 @@ h2 {
 .skills ul {
     list-style: none;
     padding: 0;
-}
-
-.skills li {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
 }
 
 .icon {
@@ -149,6 +162,10 @@ h2 {
     .details p, .contact p, .skills li, .update p {
         font-size: 0.85rem;
     }
+
+    .right-column .contact, .right-column .skills, .right-column .update {
+        padding-left: 4rem; /* Adjusted for smaller logo size */
+    }
 }
 
 /* Mobile devices (480px and below) */
@@ -189,5 +206,9 @@ h2 {
 
     section {
         margin: 1rem 0;
+    }
+
+    .right-column .contact, .right-column .skills, .right-column .update {
+        padding-left: 3.25rem; /* Adjusted for smaller logo size */
     }
 }
