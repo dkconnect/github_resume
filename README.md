@@ -17,11 +17,11 @@ This is a personal resume website for Dibyanshu Kumar, built using HTML and CSS.
 ## Setup Instructions
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone <https://github.com/dkconnect/github_resume>
    ```
 2. Navigate to the project folder:
    ```sh
-   cd resume-website
+   cd https://github.com/dkconnect/github_resume
    ```
 3. Open `index.html` in a browser to view the resume.
 
