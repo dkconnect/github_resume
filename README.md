@@ -1,4 +1,4 @@
-# Dibyanshu Kumar's Resume Website
+# Digital Resume
 
 ## Overview
 This is a personal resume website for Dibyanshu Kumar, built using HTML and CSS. It showcases education, experience, achievements, skills, and contact information in a structured and visually appealing format.
